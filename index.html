@@ -24,6 +24,7 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <!-- Internal CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -34,90 +35,90 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p class="lead"><span id="date"></span></p>
     </header>
-    <div class="container" id="timbks">
+    <div class="container">
       <div class="col-12">
         <!-- Timeblocks go here -->
         <div class="row" id="nine">
           <div class="col-2">9am</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for ten -->
         <div class="row" id="ten">
           <div class="col-2">10am</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for eleven -->
         <div class="row" id="eleven">
           <div class="col-2">11am</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for twelve -->
         <div class="row" id="twelve">
           <div class="col-2">12am</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for one -->
         <div class="row" id="one">
           <div class="col-2">1pm</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for two -->
         <div class="row" id="two">
           <div class="col-2">2pm</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for three -->
         <div class="row" id="three">
           <div class="col-2">3pm</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for four -->
         <div class="row" id="four">
           <div class="col-2">4pm</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for five -->
         <div class="row" id="five">
           <div class="col-2">5pm</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- Timeblock for six -->
         <div class="row" id="six">
           <div class="col-2">6pm</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- TimeBlock for seven -->
         <div class="row" id="seven">
           <div class="col-2">7pm</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
 
         <!-- TimeBlock for eight -->
         <div class="row" id="eight">
           <div class="col-2">8pm</div>
-          <textarea class="col-8 border border-dark"></textarea>
-          <button class="btn col-2">Save</button>
+          <textarea class="col-8 border border-dark item" id="taskEntry"></textarea>
+          <button class="btn btn-save col-2">Save</button>
         </div>
       </div>
     </div>
@@ -128,11 +129,14 @@
       crossorigin="anonymous"
     ></script>
 
-    <!--inner js -->
-    <script src="./js/script.js"></script>
+   
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+     <!--inner js -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
