@@ -3,46 +3,34 @@
 var rtNow = moment().format("ddd MMMM Do, YYYY; hh:mm:ss a");
 document.querySelector('#date').innerHTML=rtNow;
 
+var currentHour = moment().format("HH");
 //array to hold tasks for saving
 var entry = document.querySelector('#taskEntry')
-
-// var entryObj = {
-//   id: taskEntry,
-//   name: entryNameInput,
-//   type: taskTypeInput,
-//   status: "to do"
-// }
-
-
 
 
 $('.btn').on('click', function() {
   var text = $(this).siblings('textarea').val();
+  var key = $(this).siblings('div').text()
+  console.log(text)
+  localStorage.setItem(key, text);
 })
 
-localStorage.setItem('text', 'textarea');
+var textAreaEl = document.querySelectorAll("textarea");
+var arrTime = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm"] 
+for(i=0; i< textAreaEl.length; i++){
+  console.log(textAreaEl[i], arrTime[i])
+  if(i+9 < currentHour){
+    textAreaEl[i].setAttribute("class", "col-8 border border-dark item past")
+  } else if (i+9 == currentHour){
+    textAreaEl[i].setAttribute("class", "col-8 border border-dark item present")
+  }else {
+    textAreaEl[i].setAttribute("class", "col-8 border border-dark item future")
+  }
+  var innerText = localStorage.getItem(arrTime[i])
+  textAreaEl[i].value = innerText
+}
 
-// var area = document.querySelector('#row');
-// for(let i = 0; i < rows.length; i++) {
-//   if (time === rtNow)
-
-// }
-// if (time === currentDate.format("H")) {
-//   $("#taskEntry" + time)
-//   //addClass
-//   .addClass("present");
-//   console.log("present");
-//   //make new class
-// } else if (time > currentDate.format("H"))  {
-//   $("#taskEntry" + time)
-  
-// }Else
-//   $("#taskEntry" + time).addClass("past");
-//   console.log("past");
-
-
-
-// textarea item 
+// txtarea item 
 var itemlt = document.querySelector('.item')
 
 //button
@@ -58,31 +46,5 @@ console.log(colblk);
   
 }
 
-// localStorage.setItem('text',)
 
-
-// function saveclk(event) { 
-//     itemlt = ' '; 
-//     document.getElementById("btn").addEventListener("click", saveclk)  
-//    console.log(event.target.parentNode.parentNode.id);
-// } 
-
-// buttons.forEach((button) => {
-
-//     // console.log(button)
-//     button.addEventListener('click', saveclk)
-    
-// });
-// localStorage.setItem(' ');
-// localStorage.clear();
-// localStorage.setItem(btn, itemlt);
-
-// localStorage.setItem(textName, textValue);
-
-// audit task due dates every 30 minutes
-// setInterval(function() {
-//     $(".row .item").each(function() {
-//       auditTask($(this));
-//     });
-//   }, 1800000);
 
