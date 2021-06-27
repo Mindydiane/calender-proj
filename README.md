@@ -11,7 +11,7 @@
 ![mindydiane github io_calender-proj_](https://user-images.githubusercontent.com/80286982/123561502-49d4f680-d76e-11eb-92ee-a2dad139e737.png)
 
 Deployed: https://mindydiane.github.io/calender-proj/
-Github Repo: 
+Github Repo: https://github.com/Mindydiane/calender-proj
 </br></br>
 Published by: Mindy Diane Garza
 
